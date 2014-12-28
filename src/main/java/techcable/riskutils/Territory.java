@@ -64,9 +64,9 @@ public class Territory {
 		
 		for (int i = 0; i < toCompare; i++) {
 			if (attackDice[i] > defendDice[i]) {
-				setTroops(getTroops() - 1);
-			} else {
 				defender.setTroops(defender.getTroops() - 1);
+			} else {
+				setTroops(getTroops() - 1);
 			}
 		}
 	}
