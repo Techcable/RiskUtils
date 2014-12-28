@@ -29,7 +29,7 @@ public class Territory {
 	}
 	
 	public boolean canAttack(Territory defender) {
-		return getTroops() > 1 && defender.getTroops() > 2;
+		return getTroops() > 1 && defender.getTroops() > 0;
 	}
 	
 	public static Territory fromString(String s) {
@@ -57,8 +57,8 @@ public class Territory {
 		
 		int[] attackDice = roll(getAttackRolls());
 		int[] defendDice = roll(defender.getDefenceRolls());
-		attackDice = reverseSort(attackDice);
-		defendDice = reverseSort(defendDice);
+		reverseSort(attackDice);
+		reverseSort(defendDice);
 		
 		int toCompare = Math.min(getAttackRolls(), defender.getDefenceRolls());
 		

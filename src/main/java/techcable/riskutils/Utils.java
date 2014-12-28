@@ -14,9 +14,8 @@ public class Utils {
 			return -o1.compareTo(o2); //Opposite of positive
 		}
 	};
-	public static int[] reverseSort(int[] array) {
-		Integer[] objArray = ArrayUtils.toObject(array);
-		Arrays.sort(objArray, REVERSE_COMPARE);
-		return ArrayUtils.toPrimitive(objArray);
+	public static void reverseSort(int[] array) {
+		Arrays.sort(array);
+		ArrayUtils.reverse(array);
 	}
 }
